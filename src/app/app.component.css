@@ -1,0 +1,32 @@
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    margin:100px;
+    border-radius: 10px;;
+    background-color: rgb(150, 237, 100);
+    box-shadow: 1px 1px 2px 2px #aca9a9;
+}
+
+.ip-parent{
+    display: flex;
+    height: 30px;
+    width: auto;
+    margin:5px;
+}
+
+button{
+    padding:5px;
+    margin-left:15px;
+    border-radius: 5px;
+}
+
+input{
+    border-radius: 5px;
+}

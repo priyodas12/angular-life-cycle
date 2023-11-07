@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="ip-parent">
+    <input type="text" #inputRef>
+    <button (click)="onClickBtn(inputRef)">Show/Hide</button>
+  </div>  
+    <app-child [messageFromParent]="message"></app-child>
+</div>

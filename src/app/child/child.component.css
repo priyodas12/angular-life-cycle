@@ -1,0 +1,15 @@
+.child-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: last baseline;
+    height: 20vh;
+    width: 35vw;
+    background-color: rgb(96, 96, 247);
+    border-radius: 5px;
+    padding:10px;
+    margin:10px;  
+}
+
+h4{
+    margin-bottom: 40px;
+}
