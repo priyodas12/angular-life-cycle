@@ -3,5 +3,7 @@
     <input type="text" #inputRef>
     <button (click)="onClickBtn(inputRef)">Show/Hide</button>
   </div>  
-    <app-child [messageFromParent]="message"></app-child>
+    <app-child [messageFromParent]="message">
+      <p #projectedContent>This is Projected Content! {{message}}</p>
+    </app-child>
 </div>

@@ -1,11 +1,13 @@
-import { Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnChanges, OnInit, DoCheck {
+export class ChildComponent implements
+  OnChanges, OnInit, DoCheck,
+  AfterContentInit, AfterContentChecked {
 
   childMessage: string = 'Test Child';
 
@@ -31,5 +33,12 @@ export class ChildComponent implements OnChanges, OnInit, DoCheck {
     console.log('child: ngDoCheck hook called!');
   }
 
+  ngAfterContentInit(): void {
+    console.log('child: ngAfterContentInit hook called!');
+  }
+
+  ngAfterContentChecked(): void {
+    console.log('child: ngAfterContentChecked hook called!');
+  }
 
 }
