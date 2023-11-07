@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnChanges, OnInit {
   message: string = '';
 
   constructor() {
-    console.log('Parent Constructor!');
+    console.log('Parent Constructor Called!');
   }
 
   onClickBtn(inputEvent: HTMLInputElement) {
@@ -17,7 +17,12 @@ export class AppComponent {
     this.message = inputEvent.value;
   }
 
-  ngOnChanges() {
+  ngOnChanges(whatChanges: SimpleChanges) {
     console.log('parent: ngOnChanges hook called!');
+    console.log('parent ' + whatChanges);
+  }
+
+  ngOnInit(): void {
+    console.log('parent: ngOnInit hook called!');
   }
 }
